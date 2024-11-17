@@ -8,6 +8,8 @@ cmd = f"docker run -u {getuid()}:1001 --rm --workdir {workspace} -v {getenv('GIT
 cmd = f"{cmd} {docker_repository}/{docker_image}:{generator_tag} generate"
 cmd = f"{cmd} -g {generator} -o {workspace}/{generator}-client"
 
+print (f"Running command: {cmd}")
+
 if openapi_url == "UNSET":
     if not openapi_file.startswith("/"):
         openapi_file = f"{workspace}/{openapi_file}"
