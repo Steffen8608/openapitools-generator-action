@@ -47,6 +47,9 @@ Additional arguments to pass through to the [generate](https://openapi-generator
 
 No outputs are returned. The generated client is placed in the current directory. The name of the package (unless configured differently) will be `generator-name-client` where "generator-name" is (unsurprisingly) the name of the generator used to generate the client.
 
+## Workspace
+Path to the current workspace. Defaults to `/github/workspace`. It's possible to change the workspace to a different directory by setting the `workspace` input. (For use with gitea for example)
+
 ## Example usage
 ```yaml
 jobs:
