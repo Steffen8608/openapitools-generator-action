@@ -39,6 +39,10 @@ inputs:
   command-args:
     description: Optional, additional arguments to pass through to the generator.
     required: false
+  workspace:
+    description: The path to the workspace
+    required: false
+    default: /github/workspace
 
 runs:
   using: composite
